@@ -1,0 +1,302 @@
+1
+00:00:00,012 --> 00:00:02,942
+Every dot on this map is
+a real methane plume:
+
+2
+00:00:03,272 --> 00:00:05,612
+more than ten thousand detections
+over the Permian Basin,
+
+3
+00:00:05,652 --> 00:00:09,422
+from aircraft and satellites,
+published by Carbon Mapper.
+
+4
+00:00:10,092 --> 00:00:12,102
+Detecting leaks isn't
+the hard part anymore.
+
+5
+00:00:12,732 --> 00:00:14,302
+The hard part is the next question:
+
+6
+00:00:14,912 --> 00:00:18,242
+who fixes it, who pays, and how
+does anyone know it was fixed?
+
+7
+00:00:18,792 --> 00:00:20,982
+PLUME is the workflow that
+comes after detection.
+
+8
+00:00:25,008 --> 00:00:28,098
+Every screen labels what's
+real and what's simulated.
+
+9
+00:00:29,525 --> 00:00:31,275
+This is one candidate source:
+
+10
+00:00:31,765 --> 00:00:35,355
+fifty-one detections on twenty-eight
+different days, from five instruments.
+
+11
+00:00:36,125 --> 00:00:39,515
+That's Carbon Mapper's own plume
+image, drawn where they put it.
+
+12
+00:00:39,865 --> 00:00:43,485
+We keep what's known, a plume at this point
+and rate, apart from what's inferred,
+
+13
+00:00:43,525 --> 00:00:47,535
+that these detections share a source,
+and from what space can't tell us:
+
+14
+00:00:47,765 --> 00:00:49,775
+the operator, or the faulty component.
+
+15
+00:00:55,011 --> 00:00:57,911
+As the sponsor, I run an investigation.
+
+16
+00:00:57,951 --> 00:01:00,831
+It's mostly computation, not a chatbot:
+
+17
+00:01:00,871 --> 00:01:05,571
+validation, DBSCAN grouping that matches
+Carbon Mapper's own at an adjusted Rand
+
+18
+00:01:05,611 --> 00:01:10,651
+index of 0.97, an explainable priority
+score, and guidance from EPA,
+
+19
+00:01:10,691 --> 00:01:13,381
+IEA and UNEP sources.
+
+20
+00:01:14,473 --> 00:01:18,683
+Facts stay apart from possible
+explanations, each citing evidence.
+
+21
+00:01:19,473 --> 00:01:22,453
+An LLM, if configured,
+only writes the narrative,
+
+22
+00:01:22,493 --> 00:01:26,963
+and is rejected if it invents a
+number, an evidence id or a company.
+
+23
+00:01:27,553 --> 00:01:30,643
+Today, it's the deterministic
+template, and it says so.
+
+24
+00:01:35,012 --> 00:01:39,542
+The sponsor, think of a municipal climate
+fund or an operator's own budget,
+
+25
+00:01:39,852 --> 00:01:45,122
+defines the authorised scope, milestones,
+the evidence the verifier will require,
+
+26
+00:01:45,432 --> 00:01:48,562
+an approved repair provider,
+and an independent verifier.
+
+27
+00:01:51,184 --> 00:01:55,454
+The terms are hashed, and the hash and
+the funds go into an escrow contract:
+
+28
+00:01:56,064 --> 00:01:58,734
+two real transactions on
+our local Anvil chain.
+
+29
+00:01:59,404 --> 00:02:01,984
+The contract itself refuses
+unapproved providers,
+
+30
+00:02:02,024 --> 00:02:04,714
+and any verifier who's also a party.
+
+31
+00:02:10,060 --> 00:02:13,280
+The provider accepts the
+assignment on-chain.
+
+32
+00:02:13,320 --> 00:02:15,600
+The twenty-eight-day monitoring
+window needs elapsed time,
+
+33
+00:02:15,640 --> 00:02:18,550
+so we fast-forward the
+local chain's clock.
+
+34
+00:02:19,567 --> 00:02:23,087
+The evidence is a clearly
+labelled synthetic package:
+
+35
+00:02:23,127 --> 00:02:26,127
+a work order, surveys, and pre-
+and post-repair site measurements.
+
+36
+00:02:26,167 --> 00:02:31,007
+Every file is hashed, and the hash of the
+whole manifest is committed on-chain.
+
+37
+00:02:31,047 --> 00:02:35,217
+Swap a single byte afterwards,
+and verification fails.
+
+38
+00:02:45,014 --> 00:02:49,294
+The independent verifier sees the
+satellite records, the repair record,
+
+39
+00:02:49,334 --> 00:02:51,194
+documents and measurements.
+
+40
+00:02:51,234 --> 00:02:55,974
+Server-side checks confirm complete
+documentation, an authorised provider,
+
+41
+00:02:56,014 --> 00:03:00,274
+independent parties, consistent timestamps,
+files matching the on-chain hash,
+
+42
+00:03:00,314 --> 00:03:03,364
+and a reduction beyond
+measurement uncertainty.
+
+43
+00:03:05,010 --> 00:03:08,150
+The reduction counts documented
+monitoring hours only,
+
+44
+00:03:08,190 --> 00:03:12,970
+times the IPCC AR6 warming potential,
+and it's labelled synthetic.
+
+45
+00:03:13,010 --> 00:03:17,760
+A later satellite pass that
+sees no plume is never proof.
+
+46
+00:03:18,611 --> 00:03:22,791
+The verifier signs an EIP-712
+message bound to this project,
+
+47
+00:03:22,831 --> 00:03:24,791
+evidence hash and round.
+
+48
+00:03:24,831 --> 00:03:28,611
+Rejected or inconclusive
+decisions never pay out,
+
+49
+00:03:28,651 --> 00:03:31,361
+and old signatures can't be replayed.
+
+50
+00:03:35,019 --> 00:03:37,729
+Only now does the contract
+release the funds:
+
+51
+00:03:38,099 --> 00:03:40,829
+exactly once, and only
+to the named provider.
+
+52
+00:03:41,479 --> 00:03:44,829
+And anyone can inspect exactly
+how that decision was made.
+
+53
+00:03:45,573 --> 00:03:49,203
+This independent chain check reads the
+contract straight from the browser,
+
+54
+00:03:49,673 --> 00:03:50,673
+not from our server:
+
+55
+00:03:51,193 --> 00:03:52,383
+five checks, all passing.
+
+56
+00:03:53,273 --> 00:03:57,723
+The proof timeline runs from the original
+observation, through the investigation,
+
+57
+00:03:58,073 --> 00:04:01,013
+the simulated repair, the
+evidence and the signed decision,
+
+58
+00:04:01,053 --> 00:04:03,243
+to the contract state and the payment.
+
+59
+00:04:10,240 --> 00:04:15,680
+Real observations, simulated activity and
+modelled reductions are kept separate.
+
+60
+00:04:15,720 --> 00:04:16,280
+Real-world verified reductions:
+
+61
+00:04:16,320 --> 00:04:17,860
+none.
+
+62
+00:04:17,900 --> 00:04:21,530
+We haven't fixed a real leak yet,
+and we won't pretend otherwise.
+
+63
+00:04:22,522 --> 00:04:23,832
+We don't just track emissions.
+
+64
+00:04:24,422 --> 00:04:26,012
+We help turn evidence into action.
