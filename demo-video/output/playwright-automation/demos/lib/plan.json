@@ -1,0 +1,247 @@
+[
+  {
+    "id": "plume-01-problem",
+    "chapter": "Problem",
+    "startMs": 0,
+    "endMs": 25000,
+    "tags": [
+      {
+        "kind": "real",
+        "label": "REAL",
+        "text": "Historical Carbon Mapper detections, 2019–2026"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "problem",
+        "say": "Every dot on this map is a real methane plume: more than ten thousand detections over the Permian Basin, from aircraft and satellites, published by Carbon Mapper. Detecting leaks isn't the hard part anymore. The hard part is the next question: who fixes it, who pays, and how does anyone know it was fixed? PLUME is the workflow that comes after detection.",
+        "show": "Every dot on this map is a real methane plume: more than ten thousand detections over the Permian Basin, from aircraft and satellites, published by Carbon Mapper. Detecting leaks isn't the hard part anymore. The hard part is the next question: who fixes it, who pays, and how does anyone know it was fixed? PLUME is the workflow that comes after detection."
+      }
+    ]
+  },
+  {
+    "id": "plume-02-detection",
+    "chapter": "Detection",
+    "startMs": 25000,
+    "endMs": 55000,
+    "tags": [
+      {
+        "kind": "real",
+        "label": "REAL",
+        "text": "Historical detections · provider plume image"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "labels",
+        "say": "Every screen labels what's real and what's simulated.",
+        "show": "Every screen labels what's real and what's simulated."
+      },
+      {
+        "scene": "detection",
+        "say": "This is one candidate source: fifty-one detections on twenty-eight different days, from five instruments. That's Carbon Mapper's own plume image, drawn where they put it. We keep what's known, a plume at this point and rate, apart from what's inferred, that these detections share a source, and from what space can't tell us: the operator, or the faulty component.",
+        "show": "This is one candidate source: fifty-one detections on twenty-eight different days, from five instruments. That's Carbon Mapper's own plume image, drawn where they put it. We keep what's known, a plume at this point and rate, apart from what's inferred, that these detections share a source, and from what space can't tell us: the operator, or the faulty component."
+      }
+    ]
+  },
+  {
+    "id": "plume-03-investigation",
+    "chapter": "Investigation",
+    "startMs": 55000,
+    "endMs": 95000,
+    "tags": [
+      {
+        "kind": "real",
+        "label": "REAL",
+        "text": "Real records · analysis executed live"
+      },
+      {
+        "kind": "none",
+        "label": "TEMPLATE",
+        "text": "Deterministic narrative, no LLM"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "investigate",
+        "say": "As the sponsor, I run an investigation. It's mostly computation, not a chatbot: validation, DBSCAN grouping that matches Carbon Mapper's own at an adjusted Rand index of 0.97, an explainable priority score, and guidance from EPA, IEA and U-N-E-P sources.",
+        "show": "As the sponsor, I run an investigation. It's mostly computation, not a chatbot: validation, DBSCAN grouping that matches Carbon Mapper's own at an adjusted Rand index of 0.97, an explainable priority score, and guidance from EPA, IEA and UNEP sources."
+      },
+      {
+        "scene": "report",
+        "say": "Facts stay apart from possible explanations, each citing evidence. An LLM, if configured, only writes the narrative, and is rejected if it invents a number, an evidence id or a company. Today, it's the deterministic template, and it says so.",
+        "show": "Facts stay apart from possible explanations, each citing evidence. An LLM, if configured, only writes the narrative, and is rejected if it invents a number, an evidence id or a company. Today, it's the deterministic template, and it says so."
+      }
+    ]
+  },
+  {
+    "id": "plume-04-funding",
+    "chapter": "Funding",
+    "startMs": 95000,
+    "endMs": 130000,
+    "tags": [
+      {
+        "kind": "sim",
+        "label": "SIM",
+        "text": "Simulated sponsor, provider & verifier"
+      },
+      {
+        "kind": "chain",
+        "label": "CHAIN",
+        "text": "createProject + fund · local Anvil"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "terms",
+        "say": "The sponsor, think of a municipal climate fund or an operator's own budget, defines the authorised scope, milestones, the evidence the verifier will require, an approved repair provider, and an independent verifier.",
+        "show": "The sponsor, think of a municipal climate fund or an operator's own budget, defines the authorised scope, milestones, the evidence the verifier will require, an approved repair provider, and an independent verifier."
+      },
+      {
+        "scene": "escrow",
+        "say": "The terms are hashed, and the hash and the funds go into an escrow contract: two real transactions on our local Anvil chain. The contract itself refuses unapproved providers, and any verifier who's also a party.",
+        "show": "The terms are hashed, and the hash and the funds go into an escrow contract: two real transactions on our local Anvil chain. The contract itself refuses unapproved providers, and any verifier who's also a party."
+      }
+    ]
+  },
+  {
+    "id": "plume-05-repair",
+    "chapter": "Repair",
+    "startMs": 130000,
+    "endMs": 165000,
+    "tags": [
+      {
+        "kind": "sim",
+        "label": "SIM",
+        "text": "Synthetic evidence · simulated repair"
+      },
+      {
+        "kind": "chain",
+        "label": "CHAIN",
+        "text": "acceptAssignment + submitEvidence"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "accept",
+        "say": "The provider accepts the assignment on-chain. The twenty-eight-day monitoring window needs elapsed time, so we fast-forward the local chain's clock.",
+        "show": "The provider accepts the assignment on-chain. The twenty-eight-day monitoring window needs elapsed time, so we fast-forward the local chain's clock."
+      },
+      {
+        "scene": "evidence",
+        "say": "The evidence is a clearly labelled synthetic package: a work order, surveys, and pre- and post-repair site measurements. Every file is hashed, and the hash of the whole manifest is committed on-chain. Swap a single byte afterwards, and verification fails.",
+        "show": "The evidence is a clearly labelled synthetic package: a work order, surveys, and pre- and post-repair site measurements. Every file is hashed, and the hash of the whole manifest is committed on-chain. Swap a single byte afterwards, and verification fails."
+      }
+    ]
+  },
+  {
+    "id": "plume-06-verification",
+    "chapter": "Verification",
+    "startMs": 165000,
+    "endMs": 215000,
+    "tags": [
+      {
+        "kind": "sim",
+        "label": "SIM",
+        "text": "Synthetic measurements"
+      },
+      {
+        "kind": "model",
+        "label": "MODELLED",
+        "text": "Modelled reduction"
+      },
+      {
+        "kind": "chain",
+        "label": "CHAIN",
+        "text": "EIP-712 decision recorded"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "review",
+        "say": "The independent verifier sees the satellite records, the repair record, documents and measurements. Server-side checks confirm complete documentation, an authorised provider, independent parties, consistent timestamps, files matching the on-chain hash, and a reduction beyond measurement uncertainty.",
+        "show": "The independent verifier sees the satellite records, the repair record, documents and measurements. Server-side checks confirm complete documentation, an authorised provider, independent parties, consistent timestamps, files matching the on-chain hash, and a reduction beyond measurement uncertainty."
+      },
+      {
+        "scene": "impact",
+        "say": "The reduction counts documented monitoring hours only, times the IPCC AR6 warming potential, and it's labelled synthetic. A later satellite pass that sees no plume is never proof.",
+        "show": "The reduction counts documented monitoring hours only, times the IPCC AR6 warming potential, and it's labelled synthetic. A later satellite pass that sees no plume is never proof."
+      },
+      {
+        "scene": "sign",
+        "say": "The verifier signs an EIP-712 message bound to this project, evidence hash and round. Rejected or inconclusive decisions never pay out, and old signatures can't be replayed.",
+        "show": "The verifier signs an EIP-712 message bound to this project, evidence hash and round. Rejected or inconclusive decisions never pay out, and old signatures can't be replayed."
+      }
+    ]
+  },
+  {
+    "id": "plume-07-settlement",
+    "chapter": "Settlement & Proof",
+    "startMs": 215000,
+    "endMs": 250000,
+    "tags": [
+      {
+        "kind": "chain",
+        "label": "CHAIN",
+        "text": "releasePayment · test ETH only"
+      },
+      {
+        "kind": "sim",
+        "label": "SIM",
+        "text": "Simulated repair · not a carbon credit"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "release",
+        "say": "Only now does the contract release the funds: exactly once, and only to the named provider. And anyone can inspect exactly how that decision was made.",
+        "show": "Only now does the contract release the funds: exactly once, and only to the named provider. And anyone can inspect exactly how that decision was made."
+      },
+      {
+        "scene": "proof",
+        "say": "This independent chain check reads the contract straight from the browser, not from our server: five checks, all passing. The proof timeline runs from the original observation, through the investigation, the simulated repair, the evidence and the signed decision, to the contract state and the payment.",
+        "show": "This independent chain check reads the contract straight from the browser, not from our server: five checks, all passing. The proof timeline runs from the original observation, through the investigation, the simulated repair, the evidence and the signed decision, to the contract state and the payment."
+      }
+    ]
+  },
+  {
+    "id": "plume-08-closing",
+    "chapter": "Closing",
+    "startMs": 250000,
+    "endMs": 270000,
+    "tags": [
+      {
+        "kind": "real",
+        "label": "REAL",
+        "text": "Observations"
+      },
+      {
+        "kind": "sim",
+        "label": "SIM",
+        "text": "Workflow"
+      },
+      {
+        "kind": "model",
+        "label": "MODELLED",
+        "text": "Reductions"
+      },
+      {
+        "kind": "none",
+        "label": "REAL-WORLD",
+        "text": "Verified reductions: none"
+      }
+    ],
+    "parts": [
+      {
+        "scene": "ledger",
+        "say": "Real observations, simulated activity and modelled reductions are kept separate. Real-world verified reductions: none. We haven't fixed a real leak yet, and we won't pretend otherwise.",
+        "show": "Real observations, simulated activity and modelled reductions are kept separate. Real-world verified reductions: none. We haven't fixed a real leak yet, and we won't pretend otherwise."
+      },
+      {
+        "scene": "close",
+        "say": "We don't just track emissions. We help turn evidence into action.",
+        "show": "We don't just track emissions. We help turn evidence into action."
+      }
+    ]
+  }
+]

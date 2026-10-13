@@ -1,0 +1,10 @@
+[
+  {
+    "scene": "release",
+    "text": "Only now does the contract release the funds: exactly once, and only to the named provider. And anyone can inspect exactly how that decision was made."
+  },
+  {
+    "scene": "proof",
+    "text": "This independent chain check reads the contract straight from the browser, not from our server: five checks, all passing. The proof timeline runs from the original observation, through the investigation, the simulated repair, the evidence and the signed decision, to the contract state and the payment."
+  }
+]

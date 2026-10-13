@@ -1,0 +1,10 @@
+[
+  {
+    "scene": "accept",
+    "text": "The provider accepts the assignment on-chain. The twenty-eight-day monitoring window needs elapsed time, so we fast-forward the local chain's clock."
+  },
+  {
+    "scene": "evidence",
+    "text": "The evidence is a clearly labelled synthetic package: a work order, surveys, and pre- and post-repair site measurements. Every file is hashed, and the hash of the whole manifest is committed on-chain. Swap a single byte afterwards, and verification fails."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "scene": "terms",
+    "text": "The sponsor, think of a municipal climate fund or an operator's own budget, defines the authorised scope, milestones, the evidence the verifier will require, an approved repair provider, and an independent verifier."
+  },
+  {
+    "scene": "escrow",
+    "text": "The terms are hashed, and the hash and the funds go into an escrow contract: two real transactions on our local Anvil chain. The contract itself refuses unapproved providers, and any verifier who's also a party."
+  }
+]

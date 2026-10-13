@@ -1,0 +1,10 @@
+[
+  {
+    "scene": "ledger",
+    "text": "Real observations, simulated activity and modelled reductions are kept separate. Real-world verified reductions: none. We haven't fixed a real leak yet, and we won't pretend otherwise."
+  },
+  {
+    "scene": "close",
+    "text": "We don't just track emissions. We help turn evidence into action."
+  }
+]

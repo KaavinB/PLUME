@@ -1,0 +1,10 @@
+[
+  {
+    "scene": "investigate",
+    "text": "As the sponsor, I run an investigation. It's mostly computation, not a chatbot: validation, DBSCAN grouping that matches Carbon Mapper's own at an adjusted Rand index of 0.97, an explainable priority score, and guidance from EPA, IEA and U-N-E-P sources."
+  },
+  {
+    "scene": "report",
+    "text": "Facts stay apart from possible explanations, each citing evidence. An LLM, if configured, only writes the narrative, and is rejected if it invents a number, an evidence id or a company. Today, it's the deterministic template, and it says so."
+  }
+]

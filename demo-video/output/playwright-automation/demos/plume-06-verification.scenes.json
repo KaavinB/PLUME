@@ -1,0 +1,14 @@
+[
+  {
+    "scene": "review",
+    "text": "The independent verifier sees the satellite records, the repair record, documents and measurements. Server-side checks confirm complete documentation, an authorised provider, independent parties, consistent timestamps, files matching the on-chain hash, and a reduction beyond measurement uncertainty."
+  },
+  {
+    "scene": "impact",
+    "text": "The reduction counts documented monitoring hours only, times the IPCC AR6 warming potential, and it's labelled synthetic. A later satellite pass that sees no plume is never proof."
+  },
+  {
+    "scene": "sign",
+    "text": "The verifier signs an EIP-712 message bound to this project, evidence hash and round. Rejected or inconclusive decisions never pay out, and old signatures can't be replayed."
+  }
+]
