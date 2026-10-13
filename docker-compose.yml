@@ -1,0 +1,41 @@
+# Local infrastructure for PLUME. The API and web app run on the host (see Makefile) for fast iteration;
+# a containerized full stack is defined in docker-compose.full.yml.
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    platform: linux/amd64
+    environment:
+      POSTGRES_USER: plume
+      POSTGRES_PASSWORD: plume
+      POSTGRES_DB: plume
+    ports:
+      - "5434:5432"
+    volumes:
+      - plume_pg:/var/lib/postgresql/data
+      - ./scripts/db-init.sql:/docker-entrypoint-initdb.d/10-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plume -d plume"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  anvil:
+    image: ghcr.io/foundry-rs/foundry:stable
+    entrypoint: ["anvil", "--host", "0.0.0.0", "--chain-id", "31337", "--state", "/state/anvil.json"]
+    ports:
+      - "8545:8545"
+    volumes:
+      - plume_anvil:/state
+
+  # Foundry tooling for hosts without a local Foundry install: `docker compose run --rm foundry forge test`
+  foundry:
+    image: ghcr.io/foundry-rs/foundry:stable
+    profiles: ["tools"]
+    working_dir: /contracts
+    entrypoint: ["sh", "-c"]
+    volumes:
+      - ./contracts:/contracts
+
+volumes:
+  plume_pg:
+  plume_anvil:

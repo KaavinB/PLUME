@@ -1,0 +1,151 @@
+# Curated, source-linked methane mitigation guidance used by the investigation engine.
+# Each entry paraphrases the cited publication at a general level. Entries never identify a
+# specific faulty component: satellite plume detections cannot do that.
+version: kb-2026-10-12
+entries:
+  - id: KB-OG-LDAR
+    title: Leak detection and repair (LDAR) survey of the site
+    sectors: ["1B2"]
+    tags: [leak, component, survey, ogi, persistent, recurring, inspection]
+    guidance: >-
+      Perform a ground-based leak survey (e.g. optical gas imaging or EPA Method 21 instrument
+      screening) across process equipment within the plume origin area to locate the emitting
+      component(s). Common leak points include valves, connectors, compressor seals, open-ended
+      lines and tank hatches. Repair located leaks and re-survey to confirm the repair.
+    suggested_evidence: [pre-repair leak survey record, component repair work order, post-repair re-survey]
+    sources:
+      - {publisher: US EPA, title: "Natural Gas STAR Program — Recommended Technologies to Reduce Methane Emissions", url: "https://www.epa.gov/natural-gas-star-program/recommended-technologies-reduce-methane-emissions"}
+      - {publisher: US EPA, title: "Method 21 — Determination of Volatile Organic Compound Leaks", url: "https://www.epa.gov/emc/method-21-volatile-organic-compound-leaks"}
+  - id: KB-OG-TANKS
+    title: Storage tank and vapor control inspection
+    sectors: ["1B2"]
+    tags: [tank, vapor, hatch, intermittent, control device, large]
+    guidance: >-
+      Inspect storage tank thief hatches, pressure relief devices and vapor recovery / control
+      systems. Malfunctioning or undersized vapor control is a recognised source of large,
+      intermittent emissions at production sites.
+    suggested_evidence: [tank and vapor-control inspection checklist, maintenance record]
+    sources:
+      - {publisher: US EPA, title: "Natural Gas STAR Program — Recommended Technologies to Reduce Methane Emissions", url: "https://www.epa.gov/natural-gas-star-program/recommended-technologies-reduce-methane-emissions"}
+      - {publisher: US EPA, title: "Controlling Air Pollution from the Oil and Natural Gas Industry", url: "https://www.epa.gov/controlling-air-pollution-oil-and-natural-gas-operations"}
+  - id: KB-OG-FLARE
+    title: Flare and combustion device performance check
+    sectors: ["1B2"]
+    tags: [flare, combustion, unlit, large, intermittent]
+    guidance: >-
+      Check whether flares and enclosed combustors at the site are lit and operating as designed.
+      Unlit or poorly performing combustion devices can release uncombusted gas.
+    suggested_evidence: [flare pilot monitoring log, combustion device inspection record]
+    sources:
+      - {publisher: US EPA, title: "Controlling Air Pollution from the Oil and Natural Gas Industry", url: "https://www.epa.gov/controlling-air-pollution-oil-and-natural-gas-operations"}
+      - {publisher: IEA, title: "Driving Down Methane Leaks from the Oil and Gas Industry", url: "https://www.iea.org/reports/driving-down-methane-leaks-from-the-oil-and-gas-industry"}
+  - id: KB-OG-PNEUMATICS
+    title: Replace gas-driven pneumatic devices
+    sectors: ["1B2"]
+    tags: [pneumatic, controller, persistent, equipment replacement, small]
+    guidance: >-
+      Where natural-gas-driven pneumatic controllers or pumps vent by design, replacement with
+      zero-emission alternatives (electric or instrument-air) removes a continuous emission source.
+    suggested_evidence: [equipment inventory, replacement work order, commissioning record]
+    sources:
+      - {publisher: US EPA, title: "Natural Gas STAR Program — Recommended Technologies to Reduce Methane Emissions", url: "https://www.epa.gov/natural-gas-star-program/recommended-technologies-reduce-methane-emissions"}
+  - id: KB-OG-SUPEREMITTER
+    title: Large-release notification and operator investigation
+    sectors: ["1B2"]
+    tags: [large, notification, regulatory, super-emitter, response]
+    guidance: >-
+      US EPA's Super-Emitter Program provides a process for certified third parties to notify EPA
+      of large methane releases (100 kg/h or more) detected by remote sensing, after which the
+      owner/operator is expected to investigate and report. Remote detections should be routed
+      through the appropriate regulatory and operator channels.
+    suggested_evidence: [operator investigation report, root-cause statement]
+    sources:
+      - {publisher: US EPA, title: "Super-Emitter Program", url: "https://www.epa.gov/super-emitter"}
+  - id: KB-OG-MEASUREMENT
+    title: Measurement-based monitoring and reporting
+    sectors: ["1B2"]
+    tags: [monitoring, measurement, reconciliation, persistent, verification]
+    guidance: >-
+      Adopt source- and site-level measurement and reconcile it against inventories (the OGMP 2.0
+      reporting framework defines graduated reporting levels). Continuous or periodic site
+      monitoring helps confirm that a repair resolved the emission.
+    suggested_evidence: [site-level measurement campaign report, monitoring data export]
+    sources:
+      - {publisher: UNEP / OGMP 2.0, title: "Oil & Gas Methane Partnership 2.0", url: "https://ogmpartnership.com/"}
+      - {publisher: IEA, title: "Global Methane Tracker 2025", url: "https://www.iea.org/reports/global-methane-tracker-2025"}
+  - id: KB-LF-SURFACE
+    title: Landfill surface emissions monitoring
+    sectors: ["6A"]
+    tags: [landfill, surface, monitoring, cover, exceedance, inspection]
+    guidance: >-
+      Conduct surface emissions monitoring across the landfill surface and around penetrations.
+      US federal landfill standards (40 CFR 60 Subpart XXX) require surface monitoring and
+      corrective action where methane concentrations exceed 500 ppm above background.
+    suggested_evidence: [surface emission monitoring map, exceedance log, corrective action record]
+    sources:
+      - {publisher: US eCFR, title: "40 CFR Part 60 Subpart XXX — Standards of Performance for Municipal Solid Waste Landfills", url: "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-60/subpart-XXX"}
+  - id: KB-LF-GCCS
+    title: Landfill gas collection system assessment
+    sectors: ["6A"]
+    tags: [landfill, gas collection, wellfield, persistent, recurring, equipment]
+    guidance: >-
+      Assess the landfill gas collection and control system: well-field coverage of active cells,
+      damaged or watered-in wells, header leaks and blower/flare capacity. Expanding or tuning
+      collection reduces fugitive landfill gas.
+    suggested_evidence: [well-field tuning record, collection system repair work order, flare/engine run log]
+    sources:
+      - {publisher: US EPA LMOP, title: "Basic Information about Landfill Gas", url: "https://www.epa.gov/lmop/basic-information-about-landfill-gas"}
+      - {publisher: US EPA LMOP, title: "Landfill Gas Energy Project Development Handbook", url: "https://www.epa.gov/lmop/landfill-gas-energy-project-development-handbook"}
+  - id: KB-AG-DIGESTER
+    title: Manure management methane capture
+    sectors: ["4B"]
+    tags: [livestock, manure, lagoon, digester, persistent]
+    guidance: >-
+      Assess manure storage (e.g. lagoons). Covered storage and anaerobic digestion with gas
+      capture and combustion or use can reduce methane from manure management.
+    suggested_evidence: [manure system assessment, cover/digester inspection record]
+    sources:
+      - {publisher: US EPA, title: "AgSTAR — Biogas Recovery in the Agriculture Sector", url: "https://www.epa.gov/agstar"}
+  - id: KB-COAL-CMM
+    title: Coal mine methane capture
+    sectors: ["1B1a"]
+    tags: [coal, ventilation, drainage, mine]
+    guidance: >-
+      Evaluate ventilation air methane and drainage gas at the mine; capture and use or destruction
+      technologies are documented by the Global Methane Initiative.
+    suggested_evidence: [mine ventilation survey, drainage system record]
+    sources:
+      - {publisher: Global Methane Initiative (US EPA), title: "Global Methane Initiative", url: "https://www.epa.gov/gmi"}
+  - id: KB-X-ATTRIBUTION
+    title: Confirm facility identity and sector on the ground
+    sectors: ["*"]
+    tags: [attribution, sector, unassigned, single, uncertain, localization]
+    guidance: >-
+      Satellite and airborne plume origins locate an emission to within tens to hundreds of metres
+      and do not identify the operator or component. Confirm the facility, its operator and the
+      responsible party through permit records and a site visit before planning work.
+    suggested_evidence: [facility identification record, operator confirmation]
+    sources:
+      - {publisher: Carbon Mapper, title: "Carbon Mapper Data Platform", url: "https://carbonmapper.org/"}
+  - id: KB-X-MARS
+    title: Coordinate with existing notification systems
+    sectors: ["*"]
+    tags: [notification, response, coordination, large]
+    guidance: >-
+      UNEP's Methane Alert and Response System (MARS) notifies governments and operators of
+      satellite-detected major emission events and tracks responses. Repair coordination should
+      reference, not duplicate, existing notifications.
+    suggested_evidence: [notification reference, operator response]
+    sources:
+      - {publisher: UNEP IMEO, title: "Methane Alert and Response System (MARS)", url: "https://methanedata.unep.org/methane-alert-response-system"}
+  - id: KB-X-VERIFY
+    title: Post-repair verification design
+    sectors: ["*"]
+    tags: [verification, monitoring, follow-up, non-detection, persistent, recurring]
+    guidance: >-
+      Plan verification before work begins: a post-repair ground survey and, where feasible,
+      quantified site measurements. A later overpass without a detected plume does not by itself
+      prove the emission stopped (detection limits, timing, clouds and coverage all matter).
+    suggested_evidence: [post-repair survey, measurement report, follow-up observation plan]
+    sources:
+      - {publisher: IEA, title: "Global Methane Tracker 2025", url: "https://www.iea.org/reports/global-methane-tracker-2025"}

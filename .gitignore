@@ -1,0 +1,36 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.next/
+out/
+coverage/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+data/cache/
+data/evidence/
+playwright-report/
+test-results/
+.DS_Store
+contracts/lib/
+contracts/deployments/*.json
+.anvil.pid
+.anvil.log
+frontend/.env.local
+# Demo video (Argo) intermediates — final deliverables live in demo-video/output/
+demo-video/.argo/
+demo-video/videos/
+demo-video/output/work/
+.video-logs/
+
+# GitHub Pages static snapshot (exported data + build output)
+frontend/snapshot/
+site/
+frontend/.next-pages/

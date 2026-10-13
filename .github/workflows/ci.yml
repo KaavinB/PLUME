@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: contracts } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+      - name: Install dependencies
+        run: |
+          forge install OpenZeppelin/openzeppelin-contracts@v5.1.0 --no-git
+          forge install foundry-rs/forge-std --no-git
+      - run: forge fmt --check
+      - run: forge build --sizes
+      - run: forge test -vv
+
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: plume
+          POSTGRES_PASSWORD: plume
+          POSTGRES_DB: plume_test
+        ports: ["5434:5432"]
+        options: >-
+          --health-cmd "pg_isready -U plume" --health-interval 5s --health-timeout 5s --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: foundry-rs/foundry-toolchain@v1
+      - name: Contract dependencies (chain integration tests deploy the escrow to Anvil)
+        working-directory: contracts
+        run: |
+          forge install OpenZeppelin/openzeppelin-contracts@v5.1.0 --no-git
+          forge install foundry-rs/forge-std --no-git
+      - working-directory: backend
+        run: uv sync --frozen
+      - working-directory: backend
+        run: uv run ruff check app tests && uv run ruff format --check app tests
+      - working-directory: backend
+        run: uv run mypy app
+      - working-directory: backend
+        env:
+          PLUME_TEST_DATABASE_URL: postgresql+psycopg://plume:plume@localhost:5434/plume_test
+        run: uv run pytest --cov=app --cov-report=term-missing:skip-covered
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build

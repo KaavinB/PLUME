@@ -1,0 +1,4 @@
+CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE DATABASE plume_test OWNER plume;
+\c plume_test
+CREATE EXTENSION IF NOT EXISTS postgis;

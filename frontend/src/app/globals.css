@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* PLUME design tokens — mission-control dark workspace. Single theme by design: the product is a
+   map workstation; a light print theme is provided for receipts via @media print. */
+:root {
+  --bg: #0a0c0f;
+  --surface: #11151a;
+  --surface-2: #161b21;
+  --surface-3: #1c222a;
+  --border: #232a32;
+  --border-strong: #303842;
+  --text: #ede8df;
+  --text-2: #aaa59b;
+  --text-3: #75716a;
+  --amber: #f2a93b;
+  --amber-dim: #8a6122;
+  --amber-bg: rgba(242, 169, 59, 0.1);
+  --teal: #4fb3a9;
+  --teal-bg: rgba(79, 179, 169, 0.1);
+  --green: #6bcb77;
+  --green-bg: rgba(107, 203, 119, 0.1);
+  --red: #e5534b;
+  --red-bg: rgba(229, 83, 75, 0.1);
+  --sim: #b49cf0; /* reserved for "simulated" labelling only */
+  --sim-bg: rgba(180, 156, 240, 0.1);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-ink-3: var(--text-3);
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
+  --color-teal: var(--teal);
+  --color-ok: var(--green);
+  --color-bad: var(--red);
+  --color-sim: var(--sim);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: rgba(242, 169, 59, 0.35);
+}
+
+/* Thin, quiet scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.maplibregl-ctrl-attrib {
+  background: rgba(10, 12, 15, 0.75) !important;
+  color: var(--text-3) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--text-2) !important;
+}
+.maplibregl-ctrl-group {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--border) !important;
+}
+.maplibregl-ctrl-icon {
+  filter: invert(0.85);
+}
+.maplibregl-popup-content {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+.maplibregl-popup-tip {
+  display: none;
+}
+
+@keyframes skeleton {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 0px, var(--surface-3) 40px, var(--surface-2) 80px);
+  background-size: 200px 100%;
+  animation: skeleton 1.4s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f6f5f2;
+    --surface-3: #eeece7;
+    --border: #d9d6cf;
+    --border-strong: #c4c0b7;
+    --text: #111111;
+    --text-2: #444444;
+    --text-3: #666666;
+    color-scheme: light;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-full {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+}
